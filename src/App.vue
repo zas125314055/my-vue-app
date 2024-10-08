@@ -1,34 +1,19 @@
 <!-- src/App.vue -->
 <template>
   <div id="app">
-    <h1>Vue 3 初始化按钮示例</h1>
-    <button @click="openModal">初始化</button>
-
-    <!-- 使用 Modal 组件 -->
-    <Modal v-if="isModalVisible" @close="isModalVisible = false" />
+    <h1>Vue 3 + Cloudflare D1 示例</h1>
+    <UserList />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import Modal from './components/Modal.vue'
-
-const isModalVisible = ref(false)
-
-const openModal = () => {
-  isModalVisible.value = true
-}
+import UserList from './components/UserList.vue';
 </script>
 
 <style>
+/* 添加全局样式 */
 #app {
   text-align: center;
   margin-top: 50px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
 }
 </style>
